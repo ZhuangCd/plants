@@ -1,0 +1,17 @@
+For class imbalance:
+
+Weighted loss function (calculate and pass in class weights to penalize the model more for misclassifying rare classes.)
+WeightedRandomSampler versample rare class images
+Data augmentation, Color Jitter, Cutout, Mixup
+
+Attention mechanishm ViT
+    Pathing, 16x16 pixels
+    Vectorization
+    Attention
+    Classification head
+
+We use a smaller pretained ViT
+ViT uses fix input size: 224x224
+timm, change classfier head with timm
+only train the head in the first epochs, then the whole
+validation: F1m confusion matrix
