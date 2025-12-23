@@ -15,3 +15,26 @@ ViT uses fix input size: 224x224
 timm, change classfier head with timm
 only train the head in the first epochs, then the whole
 validation: F1m confusion matrix
+
+
+Vit rearranges and reshapes the patches to create embedding there are libs
+
+PatchEmbed in timm?, yes its a built in, you can use einops and build your own
+
+https://github.com/huggingface/pytorch-image-models/blob/main/timm/layers/patch_embed.py
+
+
+Splitting into Patches:
+
+The input image is divided into non-overlapping patches of a fixed size (e.g., 16x16 pixels).
+This is achieved using a convolutional layer with a kernel size equal to the patch size and a stride equal to the patch size.
+Flattening:
+
+Each patch is flattened into a 1D vector. For example, a 16x16 patch with 3 color channels (RGB) results in a vector of size 16 × 16 × 3 = 768.
+Projection into Embedding Space:
+
+The flattened vectors are linearly projected into a higher-dimensional embedding space. This is done using a fully connected layer.
+Positional Encoding:
+
+Positional encodings are added to the patch embeddings to retain spatial information.
+
