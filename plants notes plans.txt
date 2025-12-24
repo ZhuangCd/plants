@@ -1,3 +1,8 @@
+Results:
+Small ViT model with 0.986 acc ran 625 minutes
+
+
+Notes:
 For class imbalance:
 
 Weighted loss function (calculate and pass in class weights to penalize the model more for misclassifying rare classes.)
@@ -37,4 +42,6 @@ The flattened vectors are linearly projected into a higher-dimensional embedding
 Positional Encoding:
 
 Positional encodings are added to the patch embeddings to retain spatial information.
+
+
 
