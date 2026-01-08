@@ -2,3 +2,4 @@
 #*.txt
 vit_data/
 *.png
+mlflow_vitsmall
